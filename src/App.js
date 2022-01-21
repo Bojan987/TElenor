@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Card from "./components/Card";
 
-function App() {
+const App = () => {
+  const [movies, setMovies] = useState({ movie1: "", movie2: "", movie3: "" });
+
+  useEffect(() => {
+    const getMovies = async () => {
+      const { data: movie1 } = await axios(`https://api.tvmaze.com/shows/1`);
+      const { data: movie2 } = await axios(`https://api.tvmaze.com/shows/2`);
+      const { data: movie3 } = await axios(`https://api.tvmaze.com/shows/3`);
+      setMovies({ movie1, movie2, movie3 });
+
+      console.log(movie1, movie2, movie3);
+    };
+    getMovies();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card movies={movies} />
+    </>
   );
-}
+};
 
 export default App;
