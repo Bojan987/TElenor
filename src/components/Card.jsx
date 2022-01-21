@@ -1,5 +1,6 @@
 import { styled, Typography } from "@mui/material";
 import React from "react";
+import parse from "html-react-parser";
 
 const imageStyles = {
   position: "absolute",
@@ -11,12 +12,11 @@ const imageStyles = {
   backgroundSize: "cover",
 };
 
-const ImageContainer = styled("div")(({ theme }) => ({
+const ImageContainer = styled("div")(() => ({
   position: "relative",
-  width: "700px",
+  width: "650px",
   height: "500px",
   background: "#222",
-  backgroundRepeat: "no-repeat",
 }));
 const ClipImage1 = styled("div")((props) => ({
   ...imageStyles,
@@ -74,13 +74,13 @@ const Card = ({ movies }) => {
             },
             "&:hover.clip1 .content1": {
               bottom: 0,
-              opacity: 1,
+              opacity: 0.8,
             },
           }}
         >
           <ImageContent className="content1">
-            <Typography variant="h5">NASLOV</Typography>
-            <Typography variant="body1">telkasjlkafhjlkashflakshf</Typography>
+            <Typography variant="h4">{movie1.name}</Typography>
+            {parse(movie1.summary)}
           </ImageContent>
         </ClipImage1>
       )}
@@ -94,13 +94,13 @@ const Card = ({ movies }) => {
             },
             "&:hover.clip2 .content2": {
               bottom: 0,
-              opacity: 1,
+              opacity: 0.7,
             },
           }}
         >
           <ImageContent className="content2">
-            <Typography variant="h5">NASLOV</Typography>
-            <Typography variant="body1">telkasjlkafhjlkashflakshf</Typography>
+            <Typography variant="h4">{movie2.name}</Typography>
+            {parse(movie2.summary)}
           </ImageContent>
         </ClipImage2>
       )}
@@ -114,13 +114,13 @@ const Card = ({ movies }) => {
             },
             "&:hover.clip3 .content3": {
               bottom: 0,
-              opacity: 1,
+              opacity: 0.7,
             },
           }}
         >
           <ImageContent className="content3">
-            <Typography variant="h5">NASLOV</Typography>
-            <Typography variant="body1">telkasjlkafhjlkashflakshf</Typography>
+            <Typography variant="h4">{movie3.name}</Typography>
+            {parse(movie3.summary)}
           </ImageContent>
         </ClipImage3>
       )}
