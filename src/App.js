@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "./components/Card";
 import Loader from "./components/Loader";
 import Homepage from "./pages/Homepage";
 

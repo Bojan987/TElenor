@@ -1,4 +1,6 @@
 export const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       x: {
         grid: {
@@ -14,7 +16,6 @@ export const options = {
         },
       },
     },
-    responsive: true,
     plugins: {
       legend: {
         position: "top",
@@ -33,7 +34,7 @@ export const options = {
   };
 
   export const optionsMobile = {
-    responsive: false,
+    responsive: true,
     maintainAspectRatio: false,
     scales: {
       x: {
@@ -50,7 +51,6 @@ export const options = {
         },
       },
     },
-    responsive: true,
     plugins: {
       legend: {
         position: "top",
