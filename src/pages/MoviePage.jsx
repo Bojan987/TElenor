@@ -21,7 +21,7 @@ const MoviePage = () => {
     const getMovie = async () => {
       setLoading(true);
       const { data } = await axios(`https://api.tvmaze.com/shows/${id}`);
-      console.log(data);
+
       //set movie data to state
       setMovie(data);
 
