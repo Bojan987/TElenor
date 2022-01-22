@@ -1,7 +1,7 @@
 import React from "react";
 import telenor from "../assets/telenorLogo.png";
 import { css, keyframes, useTheme } from "@emotion/react";
-import { styled } from "@mui/material";
+import { Grid, styled } from "@mui/material";
 
 const myEffect = keyframes`
   from {
@@ -30,11 +30,21 @@ const Loader = () => {
     animation: ${myEffect} 3000ms ${theme.transitions.easing.easeInOut};
   `;
   return (
-    <PulsatingTelenor
-      src={telenor}
-      alt="telenor logo loader"
-      css={animatedItem}
-    />
+    <Grid
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "97vh",
+      }}
+    >
+      <PulsatingTelenor
+        src={telenor}
+        alt="telenor logo loader"
+        css={animatedItem}
+      />
+    </Grid>
   );
 };
 

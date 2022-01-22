@@ -12,11 +12,8 @@ ReactDOM.render(
     <GlobalStyles
       styles={{
         body: {
-          backgroundColor: "#111",
+          backgroundColor: "#001120",
           color: "#ffff",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           minHeight: "80vh",
         },
       }}

@@ -16,7 +16,7 @@ const ImageContainer = styled("div")(() => ({
   position: "relative",
   width: "650px",
   height: "500px",
-  background: "#222",
+  background: "#001120",
 }));
 const ClipImage1 = styled("div")((props) => ({
   ...imageStyles,
