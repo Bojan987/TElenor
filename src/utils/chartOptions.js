@@ -1,6 +1,6 @@
 export const options = {
     responsive: true,
-    maintainAspectRatio: false,
+   
     scales: {
       x: {
         grid: {
