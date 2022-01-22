@@ -3,6 +3,7 @@ import telenor from "../assets/telenorLogo.png";
 import { css, keyframes, useTheme } from "@emotion/react";
 import { Grid, styled } from "@mui/material";
 
+//animate logo scaling infinite from 1 to 2
 const myEffect = keyframes`
   from {
     opacity: 1;
@@ -26,6 +27,7 @@ const PulsatingTelenor = styled("img")({
 
 const Loader = () => {
   const theme = useTheme();
+  //logo animation
   const animatedItem = css`
     animation: ${myEffect} 3000ms ${theme.transitions.easing.easeInOut};
   `;

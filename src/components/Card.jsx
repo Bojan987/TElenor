@@ -2,6 +2,7 @@ import { styled, Typography } from "@mui/material";
 import React from "react";
 import parse from "html-react-parser";
 
+//shared styles for images
 const imageStyles = {
   position: "absolute",
   top: 0,
@@ -18,6 +19,8 @@ const ImageContainer = styled("div")(() => ({
   height: "800px",
   background: "#001120",
 }));
+
+// clipped image 1- change clipp to full container size on hover
 const ClipImage1 = styled("div")((props) => ({
   ...imageStyles,
   background: `url(${props.url})`,
@@ -27,17 +30,21 @@ const ClipImage1 = styled("div")((props) => ({
   },
 }));
 
+// clipped image  2- change clipp to full container size on hover
 const ClipImage2 = styled("div")((props) => ({
   ...imageStyles,
   background: `url(${props.url})`,
   clipPath: "polygon(55% 0, 100% 0,45% 100%,20% 100%)",
 }));
+
+// clipped image 3- change clipp to full container size on hover
 const ClipImage3 = styled("div")((props) => ({
   ...imageStyles,
   background: `url(${props.url})`,
   clipPath: "polygon(100% 0, 100% 0,100% 100%,45% 100%)",
 }));
 
+// image content wrapper - hiden if not hovered / opacity set to 0 and moved -100 bottom
 const ImageContent = styled("div")({
   position: "absolute",
   bottom: -100,

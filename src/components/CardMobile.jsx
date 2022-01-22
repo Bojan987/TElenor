@@ -8,8 +8,9 @@ import { Grid } from "@mui/material";
 
 const CardMobile = ({ movies }) => {
   const { movie1, movie2, movie3 } = movies;
+  // movie card for mobile screens
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} sx={{ margin: "10px 0" }}>
       <Grid
         item
         xs={12}

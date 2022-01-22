@@ -7,12 +7,15 @@ const App = () => {
   const [movies, setMovies] = useState({ movie1: "", movie2: "", movie3: "" });
   const [loading, setLoading] = useState(false);
 
+  //fetch movies data
   useEffect(() => {
     const getMovies = async () => {
       setLoading(true);
       const { data: movie1 } = await axios(`https://api.tvmaze.com/shows/1`);
       const { data: movie2 } = await axios(`https://api.tvmaze.com/shows/2`);
       const { data: movie3 } = await axios(`https://api.tvmaze.com/shows/3`);
+
+      //set movies data to state
       setMovies({ movie1, movie2, movie3 });
 
       
