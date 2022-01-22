@@ -1,6 +1,7 @@
 import { styled, Typography } from "@mui/material";
 import React from "react";
 import parse from "html-react-parser";
+import { useNavigate } from "react-router-dom";
 
 //shared styles for images
 const imageStyles = {
@@ -11,6 +12,7 @@ const imageStyles = {
   height: "100%",
   transition: "0.5s",
   backgroundSize: "cover",
+  cursor: "pointer",
 };
 
 const ImageContainer = styled("div")(() => ({
@@ -59,7 +61,7 @@ const ImageContent = styled("div")({
 
 const Card = ({ movies }) => {
   const { movie1, movie2, movie3 } = movies;
-
+  const navigate = useNavigate();
   return (
     <ImageContainer
       className="container"
@@ -73,6 +75,7 @@ const Card = ({ movies }) => {
     >
       {movie1 && (
         <ClipImage1
+          onClick={() => navigate(`/1`)}
           url={movie1.image.original}
           className="clip clip1"
           sx={{
@@ -93,6 +96,7 @@ const Card = ({ movies }) => {
       )}
       {movie2 && (
         <ClipImage2
+          onClick={() => navigate(`/2`)}
           url={movie2.image.original}
           className="clip clip2"
           sx={{
@@ -113,6 +117,7 @@ const Card = ({ movies }) => {
       )}
       {movie3 && (
         <ClipImage3
+          onClick={() => navigate(`/3`)}
           url={movie3.image.original}
           className="clip clip3"
           sx={{

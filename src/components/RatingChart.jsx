@@ -59,7 +59,7 @@ const RatingChart = ({ movies }) => {
     labels,
     datasets: [
       {
-        label: "Movie ratings",
+        label: "Ratings",
         backgroundColor: "rgba(42, 169, 219,0.3)",
         borderColor: "rgba(119, 249, 253, 0.8)",
         borderWidth: 1,

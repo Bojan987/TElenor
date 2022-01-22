@@ -3,10 +3,10 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#896666",
+      main: "#ffff",
     },
     secondary: {
-      main: "#896666",
+      main: "#188736",
     },
     action: {
       active: "#333333",
@@ -27,7 +27,7 @@ const theme = createTheme({
   },
 
   typography: {
-    // fontFamily: "Roboto,sans-serif",
+    fontFamily: "Roboto,sans-serif",
     color: "#FFFFFF",
 
     tab: {
@@ -37,17 +37,17 @@ const theme = createTheme({
     },
 
     h1: {
-      // fontFamily: "Roboto",
+      fontFamily: "Roboto",
       fontSize: "3.5rem",
-      fontWeight: 500,
+      fontWeight: 700,
     },
     h2: {
-      // fontFamily: "Roboto",
+    
       fontSize: "1.8rem",
       fontWeight: 900,
     },
     h3: {
-      // fontFamily: "Roboto",
+    
       fontSize: "2rem",
       fontWeight: 500,
     },
@@ -56,12 +56,12 @@ const theme = createTheme({
       fontWeight: 700,
     },
     h5: {
-      // fontFamily: "Roboto",
+    
       fontSize: "1rem",
       fontWeight: 300,
     },
     h6: {
-      // fontFamily: "Roboto",
+    
       fontSize: "0.9rem",
       fontWeight: 600,
     },
@@ -71,8 +71,8 @@ const theme = createTheme({
       fontWeight: "400",
     },
     body2: {
-      color: "#4E5054",
-      fontSize: "1rem",
+      color: "#ffff",
+      fontSize: "0.9rem",
     },
     caption: {
       color: "#4E5054",
@@ -93,7 +93,7 @@ const theme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          minWidth: "100%",
+          minWidth: "80%",
         },
       },
     },

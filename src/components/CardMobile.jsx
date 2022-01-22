@@ -4,10 +4,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import parse from "html-react-parser";
+
 import { Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const CardMobile = ({ movies }) => {
   const { movie1, movie2, movie3 } = movies;
+  const navigate = useNavigate();
   // movie card for mobile screens
   return (
     <Grid container spacing={2} sx={{ margin: "10px 0" }}>
@@ -16,7 +19,10 @@ const CardMobile = ({ movies }) => {
         xs={12}
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Card sx={{ maxWidth: 345, background: "#bcecff" }}>
+        <Card
+          sx={{ maxWidth: 345, background: "#bcecff", cursor: "pointer" }}
+          onClick={() => navigate(`/1`)}
+        >
           <CardMedia
             component="img"
             height="500"
@@ -35,7 +41,10 @@ const CardMobile = ({ movies }) => {
         xs={12}
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Card sx={{ maxWidth: 345, background: "#bcecff" }}>
+        <Card
+          sx={{ maxWidth: 345, background: "#bcecff", cursor: "pointer" }}
+          onClick={() => navigate(`/2`)}
+        >
           <CardMedia
             component="img"
             height="500"
@@ -54,7 +63,10 @@ const CardMobile = ({ movies }) => {
         xs={12}
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Card sx={{ maxWidth: 345, background: "#bcecff" }}>
+        <Card
+          sx={{ maxWidth: 345, background: "#bcecff", cursor: "pointer" }}
+          onClick={() => navigate(`/3`)}
+        >
           <CardMedia
             component="img"
             height="500"

@@ -14,6 +14,7 @@ ReactDOM.render(
           backgroundColor: "#001120",
           color: "#ffff",
           minHeight: "80vh",
+          
         },
       }}
     />

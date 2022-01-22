@@ -1,31 +1,27 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Loader from "./components/Loader";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+
 import Homepage from "./pages/Homepage";
+import MoviePage from "./pages/MoviePage";
 
 const App = () => {
-  const [movies, setMovies] = useState({ movie1: "", movie2: "", movie3: "" });
-  const [loading, setLoading] = useState(false);
 
-  //fetch movies data
-  useEffect(() => {
-    const getMovies = async () => {
-      setLoading(true);
-      const { data: movie1 } = await axios(`https://api.tvmaze.com/shows/1`);
-      const { data: movie2 } = await axios(`https://api.tvmaze.com/shows/2`);
-      const { data: movie3 } = await axios(`https://api.tvmaze.com/shows/3`);
+  return <>
+  
+  <Router>
+    <Routes>
+      <Route  path="/" element={<Homepage  />} />
+      <Route  path="/:id" element={<MoviePage  />} />
+    </Routes>
+  </Router>
 
-      //set movies data to state
-      setMovies({ movie1, movie2, movie3 });
-
-      
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    };
-    getMovies();
-  }, []);
-  return <>{loading ? <Loader /> : <Homepage movies={movies} />}</>;
+  
+  </>;
 };
 
 export default App;

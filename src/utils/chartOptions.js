@@ -22,7 +22,7 @@ export const options = {
       },
       title: {
         display: true,
-        text: "Movie ratings",
+        text: 'MOVIE RATINGS',
       },
     },
     indexAxis: "y",
