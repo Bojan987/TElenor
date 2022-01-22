@@ -132,7 +132,7 @@ const MoviePage = () => {
                       marginLeft: "20px",
                     }}
                   >
-                    Premiered : {movie.ended}
+                    Premiered : {movie.premiered}
                   </Typography>
                 </Grid>
                 <Grid
